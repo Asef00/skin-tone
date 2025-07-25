@@ -15,8 +15,8 @@ export function EyeDropper({ label }: EyeDropperProps) {
       console.warn('EyeDropper API not supported in this browser.')
       return
     }
-
     try {
+      // @ts-expect-error - EyeDropper is not defined in the global scope
       const eyeDropper = new window.EyeDropper()
       const result = await eyeDropper.open()
       setSelectedColor(result.sRGBHex)
