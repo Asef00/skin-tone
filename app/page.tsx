@@ -1,5 +1,6 @@
 import { ImageUploadCard } from '@/app/components/image-upload-card'
 import ColorPickerCard from '@/app/components/color-picker-card'
+import ResultsCard from '@/app/components/results-card'
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2">
         <ImageUploadCard />
         <ColorPickerCard />
+        <ResultsCard />
       </main>
     </div>
   )
