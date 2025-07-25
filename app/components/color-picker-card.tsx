@@ -34,7 +34,7 @@ export default function ColorPickerCard() {
       </CardContent>
       <CardFooter className="flex justify-center">
         <Button
-          className="w-full cursor-pointer"
+          className="w-full max-w-xs cursor-pointer"
           onClick={handleGenerate}
           disabled={!skinTone || !hairColor || isGenerating}
         >
