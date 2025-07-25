@@ -4,9 +4,10 @@ import { Button } from '@/components/ui/button'
 
 interface EyeDropperProps {
   label: string
+  onColorChange: (color: string) => void
 }
 
-export function EyeDropper({ label }: EyeDropperProps) {
+export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
   const hasEyeDropperSupport = () => 'EyeDropper' in window
   const [selectedColor, setSelectedColor] = useState('#ffffff')
 
@@ -20,6 +21,7 @@ export function EyeDropper({ label }: EyeDropperProps) {
       const eyeDropper = new window.EyeDropper()
       const result = await eyeDropper.open()
       setSelectedColor(result.sRGBHex)
+      onColorChange(result.sRGBHex)
     } catch (e) {
       console.error('EyeDropper error:', e)
     }
