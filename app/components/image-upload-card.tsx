@@ -4,9 +4,12 @@ import { Input } from '@/components/ui/input'
 import { useState } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 export function ImageUploadCard() {
   const [image, setImage] = useState<string | null>(null)
+
+  const t = useTranslations('ImageUploadCard')
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -17,7 +20,7 @@ export function ImageUploadCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>📸 Upload Your Photo</CardTitle>
+        <CardTitle>{t('title')}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <Input
