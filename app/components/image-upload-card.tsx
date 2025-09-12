@@ -36,12 +36,13 @@ export function ImageUploadCard() {
               size="icon"
               className="absolute top-2 right-2 cursor-pointer text-gray-500 text-2xl"
               onClick={() => setImage(null)}
+              title={t('removeImage')}
             >
               &times;
             </Button>
             <Image
               src={image}
-              alt="Uploaded"
+              alt={t('altText')}
               className="w-full rounded-md"
               width={300}
               height={300}

@@ -1,5 +1,33 @@
 {
     "ImageUploadCard": {
-        "title": "📸 بارگذاری عکس"
+        "title": "📸 بارگذاری عکس",
+        "altText": "عکس بارگذاری شده",
+        "removeImage": "حذف عکس"
+    },
+    "ColorPickerCard": {
+        "title": "🎨 انتخاب رنگ‌ها",
+        "skinTone": "رنگ پوست",
+        "hairColor": "رنگ مو",
+        "generate": "تولید",
+        "generating": "در حال تولید..."
+    },
+    "ResultsCard": {
+        "title": "نتایج",
+        "skinTone": "رنگ پوست",
+        "hairColor": "رنگ مو"
+    },
+    "EyeDropper": {
+        "notSupported": "API EyeDropper در این مرورگر پشتیبانی نمی‌شود.",
+        "error": "خطای EyeDropper:"
+    },
+    "Navigation": {
+        "home": "خانه",
+        "about": "درباره",
+        "contact": "تماس"
+    },
+    "LanguageSwitcher": {
+        "selectLanguage": "انتخاب زبان",
+        "english": "English",
+        "farsi": "فارسی"
     }
 }

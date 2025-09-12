@@ -1,5 +1,33 @@
 {
     "ImageUploadCard": {
-        "title": "📸 Upload Your Photo"
+        "title": "📸 Upload Your Photo",
+        "altText": "Uploaded image",
+        "removeImage": "Remove image"
+    },
+    "ColorPickerCard": {
+        "title": "🎨 Select Your Colors",
+        "skinTone": "Skin Tone",
+        "hairColor": "Hair Color",
+        "generate": "Generate",
+        "generating": "Generating..."
+    },
+    "ResultsCard": {
+        "title": "Results",
+        "skinTone": "Skin Tone",
+        "hairColor": "Hair Color"
+    },
+    "EyeDropper": {
+        "notSupported": "EyeDropper API not supported in this browser.",
+        "error": "EyeDropper error:"
+    },
+    "Navigation": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "LanguageSwitcher": {
+        "selectLanguage": "Select Language",
+        "english": "English",
+        "farsi": "فارسی"
     }
 }

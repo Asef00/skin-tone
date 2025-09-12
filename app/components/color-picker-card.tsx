@@ -9,8 +9,10 @@ import {
 import { EyeDropper } from './eye-dropper'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function ColorPickerCard() {
+  const t = useTranslations('ColorPickerCard')
   const [skinTone, setSkinTone] = useState<string | null>(null)
   const [hairColor, setHairColor] = useState<string | null>(null)
   const [isGenerating, setIsGenerating] = useState(false)
@@ -26,11 +28,11 @@ export default function ColorPickerCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>🎨 Select Your Colors</CardTitle>
+        <CardTitle>{t('title')}</CardTitle>
       </CardHeader>
       <CardContent className="flex justify-center gap-4">
-        <EyeDropper label="Skin Tone" onColorChange={setSkinTone} />
-        <EyeDropper label="Hair Color" onColorChange={setHairColor} />
+        <EyeDropper label={t('skinTone')} onColorChange={setSkinTone} />
+        <EyeDropper label={t('hairColor')} onColorChange={setHairColor} />
       </CardContent>
       <CardFooter className="flex justify-center">
         <Button
@@ -38,7 +40,7 @@ export default function ColorPickerCard() {
           onClick={handleGenerate}
           disabled={!skinTone || !hairColor || isGenerating}
         >
-          {isGenerating ? 'Generating...' : 'Generate'}
+          {isGenerating ? t('generating') : t('generate')}
         </Button>
       </CardFooter>
     </Card>

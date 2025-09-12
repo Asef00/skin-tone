@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 interface EyeDropperProps {
   label: string
@@ -8,12 +9,13 @@ interface EyeDropperProps {
 }
 
 export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
+  const t = useTranslations('EyeDropper')
   const hasEyeDropperSupport = () => 'EyeDropper' in window
   const [selectedColor, setSelectedColor] = useState('#ffffff')
 
   const pickColor = async () => {
     if (!hasEyeDropperSupport()) {
-      console.warn('EyeDropper API not supported in this browser.')
+      console.warn(t('notSupported'))
       return
     }
     try {
@@ -23,7 +25,7 @@ export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
       setSelectedColor(result.sRGBHex)
       onColorChange(result.sRGBHex)
     } catch (e) {
-      console.error('EyeDropper error:', e)
+      console.error(t('error'), e)
     }
   }
 
