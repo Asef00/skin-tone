@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Vazirmatn } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/app/components/theme-provider'
 import Navigation from './components/navigation'
@@ -14,6 +14,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+})
+
+const vazirmatn = Vazirmatn({
+  variable: '--font-vazirmatn',
+  subsets: ['arabic'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -31,7 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} antialiased`}
       >
         <NextIntlClientProvider>
           <ThemeProvider
