@@ -1,14 +1,14 @@
 'use client'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 
 export function ImageUploadCard() {
   const [image, setImage] = useState<string | null>(null)
-
+  const inputRef = useRef<HTMLInputElement>(null)
   const t = useTranslations('ImageUploadCard')
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,6 +17,14 @@ export function ImageUploadCard() {
       setImage(URL.createObjectURL(file))
     }
   }
+
+  const handleRemoveImage = () => {
+    setImage(null)
+    if (inputRef.current) {
+      inputRef.current.value = ''
+    }
+  }
+
   return (
     <Card>
       <CardHeader>
@@ -28,6 +36,7 @@ export function ImageUploadCard() {
           type="file"
           accept="image/*"
           onChange={handleImageUpload}
+          ref={inputRef}
         />
         {image && (
           <div className="relative">
@@ -35,7 +44,7 @@ export function ImageUploadCard() {
               variant="ghost"
               size="icon"
               className="absolute top-2 right-2 cursor-pointer text-gray-500 text-2xl"
-              onClick={() => setImage(null)}
+              onClick={handleRemoveImage}
               title={t('removeImage')}
             >
               &times;
@@ -43,7 +52,7 @@ export function ImageUploadCard() {
             <Image
               src={image}
               alt={t('altText')}
-              className="w-full rounded-md"
+              className="w-full h-64 object-cover rounded-md"
               width={300}
               height={300}
             />
