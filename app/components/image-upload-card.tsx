@@ -5,6 +5,7 @@ import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
 export function ImageUploadCard() {
   const [image, setImage] = useState<string | null>(null)
@@ -50,13 +51,19 @@ export function ImageUploadCard() {
             >
               &times;
             </Button>
-            <Image
-              src={image}
-              alt={t('altText')}
-              className="w-full h-64 object-cover rounded-md"
-              width={300}
-              height={300}
-            />
+            <TransformWrapper>
+              <TransformComponent
+                wrapperClass="!w-full !h-64 rounded-md"
+                contentClass="!w-full !h-full"
+              >
+                <Image
+                  src={image}
+                  alt={t('altText')}
+                  className="object-cover"
+                  fill
+                />
+              </TransformComponent>
+            </TransformWrapper>
           </div>
         )}
       </CardContent>
