@@ -64,7 +64,7 @@ export default function ResultsCard() {
         </Card>
       ) : (
         // empty state
-        <Card className="border-dashed border-2 dark:border-gray-500 bg-transparent">
+        <Card className="bg-transparent border-none">
           <CardContent className="flex flex-col items-center justify-center py-12 px-6 text-center">
             <div className="w-16 h-16 mb-4 rounded-full flex items-center justify-center">
               <Palette className="w-8 h-8 text-purple-500" />
