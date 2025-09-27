@@ -16,27 +16,6 @@ import {
   Tooltip,
 } from '@/components/ui/tooltip'
 
-interface InputBoxProps {
-  label: string
-  description: string
-  tip: string
-  onColorChange: (color: string) => void
-}
-
-function InputBox({ label, description, tip, onColorChange }: InputBoxProps) {
-  return (
-    <div className="flex flex-col gap-2">
-      <EyeDropper label={label} onColorChange={onColorChange} />
-      <Tooltip delayDuration={1000}>
-        <TooltipTrigger>
-          <p className="text-xs text-muted-foreground">{description}</p>
-        </TooltipTrigger>
-        <TooltipContent side="bottom">{tip}</TooltipContent>
-      </Tooltip>
-    </div>
-  )
-}
-
 export default function ColorPickerCard() {
   const t = useTranslations('ColorPickerCard')
   const [skinTone, setSkinTone] = useState<string | null>(null)
@@ -81,13 +60,17 @@ export default function ColorPickerCard() {
       </CardHeader>
       <CardContent className="grid grid-cols-3 gap-4">
         {inputBoxes.map((box) => (
-          <InputBox
-            key={box.label}
-            label={box.label}
-            description={box.description}
-            tip={box.tip}
-            onColorChange={box.onColorChange}
-          />
+          <div className="flex flex-col gap-2" key={box.label}>
+            <EyeDropper label={box.label} onColorChange={box.onColorChange} />
+            <Tooltip delayDuration={1000}>
+              <TooltipTrigger>
+                <p className="text-xs text-muted-foreground">
+                  {box.description}
+                </p>
+              </TooltipTrigger>
+              <TooltipContent side="bottom">{box.tip}</TooltipContent>
+            </Tooltip>
+          </div>
         ))}
       </CardContent>
       <CardFooter className="flex justify-center">
