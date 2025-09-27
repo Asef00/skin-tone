@@ -37,6 +37,7 @@ export function ImageUploadCard() {
           accept="image/*"
           onChange={handleImageUpload}
           ref={inputRef}
+          className={image ? 'hidden' : ''}
         />
         {image && (
           <div className="relative">
