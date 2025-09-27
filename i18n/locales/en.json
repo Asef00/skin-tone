@@ -8,6 +8,7 @@
         "title": "🎨 Select Your Colors",
         "skinTone": "Skin Tone",
         "hairColor": "Hair Color",
+        "eyeColor": "Eye Color",
         "generate": "Generate",
         "generating": "Generating..."
     },

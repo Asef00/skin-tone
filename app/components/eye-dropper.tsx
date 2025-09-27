@@ -30,19 +30,17 @@ export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
   }
 
   return (
-    <div className="flex items-center gap-2">
-      <Button
-        variant="outline"
-        onClick={pickColor}
-        size="lg"
-        className="pr-1 cursor-pointer"
-      >
-        {label}
-        <div
-          className="w-14 h-8 rounded-md"
-          style={{ backgroundColor: selectedColor }}
-        ></div>
-      </Button>
-    </div>
+    <Button
+      variant="outline"
+      onClick={pickColor}
+      size="lg"
+      className="cursor-pointer ps-1 justify-start"
+    >
+      <div
+        className="w-8 h-8 rounded-md"
+        style={{ backgroundColor: selectedColor }}
+      ></div>
+      {label}
+    </Button>
   )
 }
