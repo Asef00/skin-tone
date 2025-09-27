@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
-import { Palette, ArrowRight } from 'lucide-react'
+import { Palette, ArrowLeft } from 'lucide-react'
 
 export default function ResultsCard() {
   const t = useTranslations('ResultsCard')
@@ -84,7 +84,7 @@ export default function ResultsCard() {
               ))}
             </div>
             <div className="mt-6 flex items-center gap-2 text-sm">
-              <ArrowRight className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
               <span className="font-medium">{t('emptyState.cta')}</span>
             </div>
           </CardContent>
