@@ -1,34 +1,95 @@
 {
+    "Welcome": {
+        "title": "✨ Discover Your Perfect Colors",
+        "subtitle": "Unlock the secrets of your unique beauty with AI-powered skin tone analysis",
+        "description": "Get personalized color recommendations that make you look and feel absolutely stunning!",
+        "getStarted": "Start Your Color Journey",
+        "learnMore": "How It Works"
+    },
     "ImageUploadCard": {
-        "title": "📸 Upload Your Photo",
-        "altText": "Uploaded image",
-        "removeImage": "Remove image"
+        "title": "📸 Share Your Beautiful Self",
+        "subtitle": "Upload a clear photo of yourself for the most accurate analysis",
+        "altText": "Your beautiful photo",
+        "removeImage": "Try a different photo",
+        "uploadPrompt": "Drag & drop your photo here, or click to browse",
+        "uploadTip": "💡 Pro tip: Natural lighting works best for accurate results!",
+        "requirements": "JPG, PNG up to 10MB",
+        "uploadSuccess": "Perfect! Your photo is ready for analysis",
+        "uploadError": "Oops! Please try a different photo"
     },
     "ColorPickerCard": {
-        "title": "🎨 Select Your Colors",
-        "skinTone": "Skin Tone",
-        "hairColor": "Hair Color",
-        "eyeColor": "Eye Color",
-        "generate": "Generate",
-        "generating": "Generating..."
+        "title": "🎨 Tell Us About Your Colors",
+        "subtitle": "Help us understand your unique coloring for personalized results",
+        "skinTone": "Your Skin Tone",
+        "skinToneDescription": "Select the shade that best matches your natural skin color",
+        "hairColor": "Your Hair Color",
+        "hairColorDescription": "Choose your natural hair color (or current color)",
+        "eyeColor": "Your Eye Color",
+        "eyeColorDescription": "Pick the color that best describes your eyes",
+        "generate": "✨ Discover My Colors",
+        "generating": "🔍 Analyzing your unique beauty...",
+        "generatingTip": "This may take a few moments while we analyze your features",
+        "colorTips": {
+            "skinTone": "💡 For best results, choose your natural skin tone without makeup",
+            "hairColor": "💡 Consider your natural hair color, even if you dye it",
+            "eyeColor": "💡 Look at your eyes in natural light for the most accurate color"
+        }
     },
     "ResultsCard": {
-        "title": "Results",
-        "skinTone": "Skin Tone",
-        "hairColor": "Hair Color"
+        "title": "🎉 Your Personalized Color Palette",
+        "subtitle": "Colors that will make you shine!",
+        "skinTone": "Your Perfect Skin Tone",
+        "hairColor": "Your Ideal Hair Colors",
+        "eyeColor": "Colors That Make Your Eyes Pop",
+        "recommendations": "Color Recommendations",
+        "confidence": "Confidence Level",
+        "shareResults": "Share Your Results",
+        "saveResults": "Save My Palette",
+        "tryAgain": "Try Different Colors",
+        "emptyState": {
+            "title": "🌟 Ready to Discover Your Colors?",
+            "description": "Upload your photo and tell us about your natural coloring to unlock your personalized color palette!",
+            "cta": "Let's Get Started!",
+            "features": [
+                "Personalized color recommendations",
+                "Skin tone analysis",
+                "Hair color suggestions",
+                "Makeup color matching"
+            ]
+        },
+        "success": {
+            "title": "Amazing! Here are your results",
+            "subtitle": "These colors are scientifically matched to your unique features"
+        }
     },
     "EyeDropper": {
-        "notSupported": "EyeDropper API not supported in this browser.",
-        "error": "EyeDropper error:"
+        "notSupported": "Color picker not available in this browser. Please use the color selection buttons instead.",
+        "error": "Color picker error:",
+        "selectColor": "Pick a color from your photo",
+        "colorPicked": "Great choice! This color has been selected"
     },
     "Navigation": {
         "home": "Home",
-        "about": "About",
-        "contact": "Contact"
+        "about": "About Us",
+        "contact": "Get in Touch",
+        "privacy": "Privacy",
+        "terms": "Terms"
     },
     "LanguageSwitcher": {
-        "selectLanguage": "Select Language",
+        "selectLanguage": "Choose Your Language",
         "english": "English",
         "farsi": "فارسی"
+    },
+    "Tips": {
+        "title": "💡 Pro Tips for Best Results",
+        "lighting": "Use natural lighting for the most accurate skin tone analysis",
+        "photo": "Make sure your face is clearly visible and well-lit",
+        "colors": "Choose your natural colors, not dyed hair or makeup-enhanced features",
+        "multiple": "Try different photos to see how lighting affects your results"
+    },
+    "Footer": {
+        "description": "Discover your perfect colors with our AI-powered skin tone analysis",
+        "madeWith": "Made with ❤️ for beauty enthusiasts",
+        "copyright": "© 2024 Skin Tone Analyzer. All rights reserved."
     }
 }
