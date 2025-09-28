@@ -69,31 +69,29 @@ export default function ResultsCard() {
         </Card>
       ) : (
         // empty state
-        <Card className="bg-transparent border-none">
-          <CardContent className="flex flex-col items-center justify-center py-12 px-6 text-center">
-            <div className="w-16 h-16 mb-4 rounded-full flex items-center justify-center">
-              <Palette className="w-8 h-8 text-purple-500" />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">
-              {t('emptyState.title')}
-            </h3>
-            <p className="text-sm max-w-sm leading-relaxed mb-4">
-              {t('emptyState.description')}
-            </p>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-muted-foreground mb-6">
-              {features.map((feature, index) => (
-                <div className="flex items-center gap-2" key={index}>
-                  <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 flex items-center gap-2 text-sm">
-              <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
-              <span className="font-medium">{t('emptyState.cta')}</span>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
+          <div className="w-16 h-16 mb-4 rounded-full flex items-center justify-center">
+            <Palette className="w-8 h-8 text-purple-500" />
+          </div>
+          <h3 className="text-lg font-semibold mb-2">
+            {t('emptyState.title')}
+          </h3>
+          <p className="text-sm max-w-sm leading-relaxed mb-4">
+            {t('emptyState.description')}
+          </p>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-muted-foreground mb-6">
+            {features.map((feature, index) => (
+              <div className="flex items-center gap-2" key={index}>
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex items-center gap-2 text-sm">
+            <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
+            <span className="font-medium">{t('emptyState.cta')}</span>
+          </div>
+        </div>
       )}
     </>
   )
