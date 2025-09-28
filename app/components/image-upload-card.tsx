@@ -39,7 +39,7 @@ export function ImageUploadCard() {
   }
 
   return (
-    <Card>
+    <Card className="shadow-sm backdrop-blur-xs bg-white/70">
       <CardHeader>
         <CardTitle>{t('title')}</CardTitle>
         <p className="text-sm text-muted-foreground">{t('subtitle')}</p>

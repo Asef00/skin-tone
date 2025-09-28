@@ -51,7 +51,10 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} antialiased 
+        bg-[url(/topography.svg)] bg-[#dfdbe5]
+        dark:bg-[#111111]
+        `}
       >
         <ThemeProvider
           attribute="class"
