@@ -34,7 +34,7 @@ export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
       variant="outline"
       onClick={pickColor}
       size="lg"
-      className="cursor-pointer ps-1 justify-start"
+      className="cursor-pointer p-1 justify-start lg:text-xs xl:text-sm"
     >
       <div
         className="w-8 h-8 rounded-md"

@@ -58,7 +58,7 @@ export default function ColorPickerCard() {
         <CardTitle>{t('title')}</CardTitle>
         <p className="text-sm text-muted-foreground">{t('subtitle')}</p>
       </CardHeader>
-      <CardContent className="grid grid-cols-3 gap-4">
+      <CardContent className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {inputBoxes.map((box) => (
           <div className="flex flex-col gap-2" key={box.label}>
             <EyeDropper label={box.label} onColorChange={box.onColorChange} />

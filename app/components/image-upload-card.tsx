@@ -65,11 +65,6 @@ export function ImageUploadCard() {
         />
         {image && (
           <div className="relative">
-            <div className="mb-2 p-2 bg-green-50 border border-green-200 rounded-md">
-              <p className="text-sm text-green-700 font-medium">
-                {t('uploadSuccess')}
-              </p>
-            </div>
             <Button
               variant="ghost"
               size="icon"
