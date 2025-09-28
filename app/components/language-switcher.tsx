@@ -6,8 +6,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { Button } from '@/components/ui/button'
+} from '@/app/components/ui/dropdown-menu'
+import { Button } from '@/app/components/ui/button'
 import { Globe } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 

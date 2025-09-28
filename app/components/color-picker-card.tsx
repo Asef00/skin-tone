@@ -5,16 +5,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/app/components/ui/card'
 import { EyeDropper } from './eye-dropper'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   TooltipTrigger,
   TooltipContent,
   Tooltip,
-} from '@/components/ui/tooltip'
+} from '@/app/components/ui/tooltip'
 
 export default function ColorPickerCard() {
   const t = useTranslations('ColorPickerCard')

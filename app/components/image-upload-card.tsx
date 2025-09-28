@@ -1,12 +1,17 @@
 'use client'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/app/components/ui/card'
+import { Input } from '@/app/components/ui/input'
 import { useState, useRef } from 'react'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 import { useTranslations } from 'next-intl'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
-import { Label } from '@/components/ui/label'
+import { Label } from '@/app/components/ui/label'
 
 export function ImageUploadCard() {
   const [image, setImage] = useState<string | null>(null)
