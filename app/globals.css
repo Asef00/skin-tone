@@ -120,7 +120,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  [lang='fa'] {
+  [lang='fa'] * {
     font-family: var(--font-vazirmatn);
   }
 }
