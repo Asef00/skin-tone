@@ -56,7 +56,7 @@ export default function ColorPickerCard() {
   }
 
   return (
-    <Card className="shadow-sm backdrop-blur-xs bg-white/70">
+    <Card className="shadow-sm backdrop-blur-xs bg-background/70">
       <CardHeader>
         <CardTitle>{t('title')}</CardTitle>
         <p className="text-sm text-muted-foreground">{t('subtitle')}</p>
