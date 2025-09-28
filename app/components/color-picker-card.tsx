@@ -29,18 +29,21 @@ export default function ColorPickerCard() {
       description: t('skinToneDescription'),
       tip: t('colorTips.skinTone'),
       onColorChange: setSkinTone,
+      defaultColor: '#F4E4C1', // Warm beige - light-medium skin tone
     },
     {
       label: t('hairColor'),
       description: t('hairColorDescription'),
       tip: t('colorTips.hairColor'),
       onColorChange: setHairColor,
+      defaultColor: '#8B4513', // Saddle brown - common natural hair color
     },
     {
       label: t('eyeColor'),
       description: t('eyeColorDescription'),
       tip: t('colorTips.eyeColor'),
       onColorChange: setEyeColor,
+      defaultColor: '#4A5568', // Warm gray - common eye color
     },
   ]
 
@@ -61,7 +64,11 @@ export default function ColorPickerCard() {
       <CardContent className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {inputBoxes.map((box) => (
           <div className="flex flex-col gap-2" key={box.label}>
-            <EyeDropper label={box.label} onColorChange={box.onColorChange} />
+            <EyeDropper
+              label={box.label}
+              onColorChange={box.onColorChange}
+              defaultColor={box.defaultColor}
+            />
             <Tooltip delayDuration={1000}>
               <TooltipTrigger>
                 <p className="text-xs text-muted-foreground">

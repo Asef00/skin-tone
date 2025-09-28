@@ -5,13 +5,18 @@ import { useTranslations } from 'next-intl'
 
 interface EyeDropperProps {
   label: string
+  defaultColor?: string
   onColorChange: (color: string) => void
 }
 
-export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
+export function EyeDropper({
+  label,
+  onColorChange,
+  defaultColor = '#F4E4C1',
+}: EyeDropperProps) {
   const t = useTranslations('EyeDropper')
   const hasEyeDropperSupport = () => 'EyeDropper' in window
-  const [selectedColor, setSelectedColor] = useState('#ffffff')
+  const [selectedColor, setSelectedColor] = useState(defaultColor)
 
   const pickColor = async () => {
     if (!hasEyeDropperSupport()) {
@@ -37,7 +42,7 @@ export function EyeDropper({ label, onColorChange }: EyeDropperProps) {
       className="cursor-pointer p-1 justify-start lg:text-xs xl:text-sm"
     >
       <div
-        className="w-8 h-8 rounded-md"
+        className="w-8 h-8 rounded-md shadow-sm border border-border"
         style={{ backgroundColor: selectedColor }}
       ></div>
       {label}
