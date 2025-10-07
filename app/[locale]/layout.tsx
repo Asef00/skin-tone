@@ -52,7 +52,7 @@ export default async function RootLayout({
     >
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} antialiased 
-        bg-[url(/topography.svg)] bg-[#dfdbe5]
+        bg-[url(/blue-flower.png)] bg-no-repeat bg-[#dfdbe5]
         dark:bg-[#111111]
         `}
       >
